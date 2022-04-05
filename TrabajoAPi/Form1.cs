@@ -32,7 +32,7 @@ namespace TrabajoAPi
 
                 //pictureBox1.ImageLocation = "https://openweathermap.org/img/w/" + infoClima.weather[0].icon + ".png";
                 //lblCondicion.Text = infoClima.weathers[0].main.ToString();
-                lblCondicion.Text = infoClima.weathers[0].main.ToString();
+                lblCondicion.Text = infoClima.weathers[0].main;
                 lblDetalles.Text = infoClima.weathers[0].description.ToString();
                 lblAtardecer.Text = service.convertToDateTime(infoClima.sys.sunset).ToString();
                 lblAmanecer.Text = service.convertToDateTime(infoClima.sys.sunrise).ToString();

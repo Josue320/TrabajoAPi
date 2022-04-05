@@ -18,12 +18,12 @@ namespace AppCore.Service
         }
         public DateTime convertToDateTime(long milisegundos)
         {
-            throw new NotImplementedException();
+            return service.convertToDateTime(milisegundos);
         }
 
         public string GetImageLocation(Weather w)
         {
-            throw new NotImplementedException();
+            return service.GetImageLocation(w);
         }
 
         public Root GetWeather(string ciudad)
