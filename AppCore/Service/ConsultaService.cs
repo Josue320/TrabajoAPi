@@ -1,5 +1,6 @@
 ﻿using AppCore.Iservices;
 using Domain.Entities;
+using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,9 +10,9 @@ namespace AppCore.Service
     public class ConsultaService : IService
     {
 
-        private IService service;
+        private IConsulta service;
 
-        public ConsultaService(IService service)
+        public ConsultaService(IConsulta service)
         {
             this.service = service;
         }
