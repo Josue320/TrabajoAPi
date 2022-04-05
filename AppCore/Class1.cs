@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Domain
+namespace AppCore
 {
     public class Class1
     {
