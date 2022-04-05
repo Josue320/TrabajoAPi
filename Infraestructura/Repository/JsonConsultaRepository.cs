@@ -12,16 +12,18 @@ namespace Infraestructura
     public class JsonConsultaRepository : IConsulta
     {
 
-        private Root infoClima;
-        private const string ApiKey = "9e7a17c08359f3a339918e8a3f3b0ffa";
+        private Root infoClima; 
+       private const string ApiKey = "9e7a17c08359f3a339918e8a3f3b0ffa";
+
 
         public Root GetWeather(string ciudad)
         {
             using (WebClient obj = new WebClient()) {
-                string url = $"https://api.openweathermap.org/data/2.5/weather?q={ciudad}&appid=ApiKey";
+                string url = $@"https://api.openweathermap.org/data/2.5/weather?q={ciudad}&appid={ApiKey}";
                 var json = obj.DownloadString(url);
                 infoClima = JsonConvert.DeserializeObject<Root>(json);
-            return infoClima;
+
+                return infoClima;
             }
         }
 
@@ -29,7 +31,7 @@ namespace Infraestructura
 
         public string GetImageLocation(Weather w)
         {
-            string imageLocation = $"https://openweathermap.org/img/w/{w.icon}.png";
+            string imageLocation = $@"https://openweathermap.org/img/w/{w.icon}.png";
             return imageLocation;
         }
 

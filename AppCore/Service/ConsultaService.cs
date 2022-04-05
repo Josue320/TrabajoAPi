@@ -28,7 +28,7 @@ namespace AppCore.Service
 
         public Root GetWeather(string ciudad)
         {
-            throw new NotImplementedException();
+            return service.GetWeather(ciudad);
         }
     }
 }
