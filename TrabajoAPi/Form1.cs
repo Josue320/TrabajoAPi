@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,13 +25,19 @@ namespace TrabajoAPi
             InitializeComponent();
         }
 
-        
+
 
         private void btnObtener_Click_1(object sender, EventArgs e)
         {
             try
             {
-                var infoClima = service.GetWeather(txtCiudad.Text);
+                if (String.IsNullOrEmpty(txtCiudad.Text))
+                {
+                    MessageBox.Show("El campo no puede estar vacio");
+                }
+                else
+                {
+                    var infoClima = service.GetWeather(txtCiudad.Text);
 
                 //pictureBox1.ImageLocation = "https://openweathermap.org/img/w/" + infoClima.weather[0].icon + ".png";
                 label4.Text = infoClima.weather[0].main.ToString();
@@ -46,14 +53,28 @@ namespace TrabajoAPi
                 LblTempMi.Text = infoClima.main.temp_min.ToString();
                 lblTemperatura.Text = infoClima.main.temp.ToString();
                 label3.Text = infoClima.main.humidity.ToString();
-
+                label6.Text = txtCiudad.Text;
                 pictureBox1.ImageLocation = service.GetImageLocation(infoClima.weather[0]);
-
+                }
             }
-            catch (NullReferenceException)
+            catch (WebException)
             {
-                MessageBox.Show("No se encontro la ciudad");
+
+                MessageBox.Show("La ciudad no existe");
             }
+
+              
+
+            
+
+            
+            //catch (WebException)
+            //{
+            //    Form2 obj = new Form2();
+
+            //    obj.Show();
+
+            //}
             txtCiudad.Text = null;
         }
     }

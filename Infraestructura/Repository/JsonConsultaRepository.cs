@@ -37,14 +37,17 @@ namespace Infraestructura
 
         public Root GetWeather(string ciudad)
         {
-            using (WebClient obj = new WebClient())
-            {
-                string url = $@"https://api.openweathermap.org/data/2.5/weather?q={ciudad}&appid={ApiKey}";
-                var json = obj.DownloadString(url);
-                infoClima = JsonConvert.DeserializeObject<Root>(json);
+            
+                using (WebClient obj = new WebClient())
+                {
+                    string url = $@"https://api.openweathermap.org/data/2.5/weather?q={ciudad}&appid={ApiKey}";
+                    var json = obj.DownloadString(url);
+                    infoClima = JsonConvert.DeserializeObject<Root>(json);
 
-                return infoClima;
-            }
+                    return infoClima;
+                }
+            
+           
         }
     }
 }
