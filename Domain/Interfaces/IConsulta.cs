@@ -9,7 +9,7 @@ namespace Domain.Interfaces
     public interface IConsulta
     {
         Root GetWeather(string ciudad);
-        string GetImageLocation(Weather w);
+        string GetImageLocation(wheather w);
 
         DateTime convertToDateTime(long milisegundos);
     }

@@ -30,6 +30,22 @@ namespace TrabajoAPi
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.lblDetalles = new System.Windows.Forms.Label();
+            this.lblCondicion = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblTemperatura = new System.Windows.Forms.Label();
+            this.lblTemp = new System.Windows.Forms.Label();
+            this.LblTempMi = new System.Windows.Forms.Label();
+            this.lblTemMa = new System.Windows.Forms.Label();
+            this.lblTempMin = new System.Windows.Forms.Label();
+            this.lblTempMax = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnObtener = new System.Windows.Forms.Button();
+            this.txtCiudad = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -38,144 +54,310 @@ namespace TrabajoAPi
             this.lblPresion = new System.Windows.Forms.Label();
             this.lblAtardecer = new System.Windows.Forms.Label();
             this.lblAmanecer = new System.Windows.Forms.Label();
-            this.lblDetalles = new System.Windows.Forms.Label();
-            this.lblCondicion = new System.Windows.Forms.Label();
+            this.lblCountry = new System.Windows.Forms.Label();
+            this.lblHumedad = new System.Windows.Forms.Label();
             this.lblCiudad = new System.Windows.Forms.Label();
-            this.txtCiudad = new System.Windows.Forms.TextBox();
-            this.btnObtener = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // lblDetalles
+            // 
+            this.lblDetalles.AutoSize = true;
+            this.lblDetalles.BackColor = System.Drawing.Color.Transparent;
+            this.lblDetalles.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblDetalles.Location = new System.Drawing.Point(107, 368);
+            this.lblDetalles.Name = "lblDetalles";
+            this.lblDetalles.Size = new System.Drawing.Size(27, 13);
+            this.lblDetalles.TabIndex = 69;
+            this.lblDetalles.Text = "N/A";
+            // 
+            // lblCondicion
+            // 
+            this.lblCondicion.AutoSize = true;
+            this.lblCondicion.BackColor = System.Drawing.Color.Transparent;
+            this.lblCondicion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCondicion.Location = new System.Drawing.Point(107, 338);
+            this.lblCondicion.Name = "lblCondicion";
+            this.lblCondicion.Size = new System.Drawing.Size(27, 13);
+            this.lblCondicion.TabIndex = 68;
+            this.lblCondicion.Text = "N/A";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(19, 368);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.TabIndex = 67;
+            this.label5.Text = "Detalles";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(19, 338);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.TabIndex = 66;
+            this.label4.Text = "Condicion";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(90, 55);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 13);
+            this.label3.TabIndex = 65;
+            this.label3.Text = "N/A";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(90, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 13);
+            this.label2.TabIndex = 64;
+            this.label2.Text = "N/A";
+            // 
+            // lblTemperatura
+            // 
+            this.lblTemperatura.AutoSize = true;
+            this.lblTemperatura.BackColor = System.Drawing.Color.Transparent;
+            this.lblTemperatura.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTemperatura.Location = new System.Drawing.Point(119, 300);
+            this.lblTemperatura.Name = "lblTemperatura";
+            this.lblTemperatura.Size = new System.Drawing.Size(27, 13);
+            this.lblTemperatura.TabIndex = 63;
+            this.lblTemperatura.Text = "N/A";
+            // 
+            // lblTemp
+            // 
+            this.lblTemp.AutoSize = true;
+            this.lblTemp.BackColor = System.Drawing.Color.Transparent;
+            this.lblTemp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTemp.Location = new System.Drawing.Point(12, 300);
+            this.lblTemp.Name = "lblTemp";
+            this.lblTemp.Size = new System.Drawing.Size(67, 13);
+            this.lblTemp.TabIndex = 62;
+            this.lblTemp.Text = "Temperatura";
+            // 
+            // LblTempMi
+            // 
+            this.LblTempMi.AutoSize = true;
+            this.LblTempMi.BackColor = System.Drawing.Color.Transparent;
+            this.LblTempMi.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LblTempMi.Location = new System.Drawing.Point(119, 266);
+            this.LblTempMi.Name = "LblTempMi";
+            this.LblTempMi.Size = new System.Drawing.Size(27, 13);
+            this.LblTempMi.TabIndex = 61;
+            this.LblTempMi.Text = "N/A";
+            // 
+            // lblTemMa
+            // 
+            this.lblTemMa.AutoSize = true;
+            this.lblTemMa.BackColor = System.Drawing.Color.Transparent;
+            this.lblTemMa.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTemMa.Location = new System.Drawing.Point(119, 230);
+            this.lblTemMa.Name = "lblTemMa";
+            this.lblTemMa.Size = new System.Drawing.Size(27, 13);
+            this.lblTemMa.TabIndex = 60;
+            this.lblTemMa.Text = "N/A";
+            // 
+            // lblTempMin
+            // 
+            this.lblTempMin.AutoSize = true;
+            this.lblTempMin.BackColor = System.Drawing.Color.Transparent;
+            this.lblTempMin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTempMin.Location = new System.Drawing.Point(12, 266);
+            this.lblTempMin.Name = "lblTempMin";
+            this.lblTempMin.Size = new System.Drawing.Size(102, 13);
+            this.lblTempMin.TabIndex = 59;
+            this.lblTempMin.Text = "Temperatura minima";
+            // 
+            // lblTempMax
+            // 
+            this.lblTempMax.AutoSize = true;
+            this.lblTempMax.BackColor = System.Drawing.Color.Transparent;
+            this.lblTempMax.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTempMax.Location = new System.Drawing.Point(12, 230);
+            this.lblTempMax.Name = "lblTempMax";
+            this.lblTempMax.Size = new System.Drawing.Size(72, 13);
+            this.lblTempMax.TabIndex = 58;
+            this.lblTempMax.Text = "Temp maxima";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(211, 64);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 57;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnObtener
+            // 
+            this.btnObtener.Location = new System.Drawing.Point(223, 15);
+            this.btnObtener.Name = "btnObtener";
+            this.btnObtener.Size = new System.Drawing.Size(75, 23);
+            this.btnObtener.TabIndex = 56;
+            this.btnObtener.Text = "Buscar";
+            this.btnObtener.UseVisualStyleBackColor = true;
+            this.btnObtener.Click += new System.EventHandler(this.btnObtener_Click_1);
+            // 
+            // txtCiudad
+            // 
+            this.txtCiudad.Location = new System.Drawing.Point(75, 15);
+            this.txtCiudad.Name = "txtCiudad";
+            this.txtCiudad.Size = new System.Drawing.Size(100, 20);
+            this.txtCiudad.TabIndex = 55;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(154, 223);
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label10.Location = new System.Drawing.Point(119, 173);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(27, 13);
-            this.label10.TabIndex = 28;
+            this.label10.TabIndex = 54;
             this.label10.Text = "N/A";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(122, 190);
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label9.Location = new System.Drawing.Point(87, 140);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(27, 13);
-            this.label9.TabIndex = 27;
+            this.label9.TabIndex = 53;
             this.label9.Text = "N/A";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(142, 250);
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(107, 200);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(27, 13);
-            this.label8.TabIndex = 26;
+            this.label8.TabIndex = 52;
             this.label8.Text = "N/A";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(122, 163);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(87, 113);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(27, 13);
-            this.label1.TabIndex = 25;
+            this.label1.TabIndex = 51;
             this.label1.Text = "N/A";
             // 
             // lblVelocidadViento
             // 
             this.lblVelocidadViento.AutoSize = true;
-            this.lblVelocidadViento.Location = new System.Drawing.Point(61, 223);
+            this.lblVelocidadViento.BackColor = System.Drawing.Color.Transparent;
+            this.lblVelocidadViento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblVelocidadViento.Location = new System.Drawing.Point(12, 173);
             this.lblVelocidadViento.Name = "lblVelocidadViento";
             this.lblVelocidadViento.Size = new System.Drawing.Size(87, 13);
-            this.lblVelocidadViento.TabIndex = 24;
+            this.lblVelocidadViento.TabIndex = 50;
             this.lblVelocidadViento.Text = "Velocidad Viento";
             // 
             // lblPresion
             // 
             this.lblPresion.AutoSize = true;
-            this.lblPresion.Location = new System.Drawing.Point(62, 250);
+            this.lblPresion.BackColor = System.Drawing.Color.Transparent;
+            this.lblPresion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblPresion.Location = new System.Drawing.Point(12, 200);
             this.lblPresion.Name = "lblPresion";
             this.lblPresion.Size = new System.Drawing.Size(42, 13);
-            this.lblPresion.TabIndex = 23;
+            this.lblPresion.TabIndex = 49;
             this.lblPresion.Text = "Presion";
             // 
             // lblAtardecer
             // 
             this.lblAtardecer.AutoSize = true;
-            this.lblAtardecer.Location = new System.Drawing.Point(61, 190);
+            this.lblAtardecer.BackColor = System.Drawing.Color.Transparent;
+            this.lblAtardecer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblAtardecer.Location = new System.Drawing.Point(12, 140);
             this.lblAtardecer.Name = "lblAtardecer";
             this.lblAtardecer.Size = new System.Drawing.Size(53, 13);
-            this.lblAtardecer.TabIndex = 22;
+            this.lblAtardecer.TabIndex = 48;
             this.lblAtardecer.Text = "Atardecer";
             // 
             // lblAmanecer
             // 
             this.lblAmanecer.AutoSize = true;
-            this.lblAmanecer.Location = new System.Drawing.Point(61, 163);
+            this.lblAmanecer.BackColor = System.Drawing.Color.Transparent;
+            this.lblAmanecer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblAmanecer.Location = new System.Drawing.Point(12, 113);
             this.lblAmanecer.Name = "lblAmanecer";
             this.lblAmanecer.Size = new System.Drawing.Size(55, 13);
-            this.lblAmanecer.TabIndex = 21;
+            this.lblAmanecer.TabIndex = 47;
             this.lblAmanecer.Text = "Amanecer";
             // 
-            // lblDetalles
+            // lblCountry
             // 
-            this.lblDetalles.AutoSize = true;
-            this.lblDetalles.Location = new System.Drawing.Point(61, 135);
-            this.lblDetalles.Name = "lblDetalles";
-            this.lblDetalles.Size = new System.Drawing.Size(45, 13);
-            this.lblDetalles.TabIndex = 20;
-            this.lblDetalles.Text = "Detalles";
+            this.lblCountry.AutoSize = true;
+            this.lblCountry.BackColor = System.Drawing.Color.Transparent;
+            this.lblCountry.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCountry.Location = new System.Drawing.Point(12, 87);
+            this.lblCountry.Name = "lblCountry";
+            this.lblCountry.Size = new System.Drawing.Size(27, 13);
+            this.lblCountry.TabIndex = 46;
+            this.lblCountry.Text = "Pais";
             // 
-            // lblCondicion
+            // lblHumedad
             // 
-            this.lblCondicion.AutoSize = true;
-            this.lblCondicion.Location = new System.Drawing.Point(61, 105);
-            this.lblCondicion.Name = "lblCondicion";
-            this.lblCondicion.Size = new System.Drawing.Size(54, 13);
-            this.lblCondicion.TabIndex = 19;
-            this.lblCondicion.Text = "Condicion";
+            this.lblHumedad.AutoSize = true;
+            this.lblHumedad.BackColor = System.Drawing.Color.Transparent;
+            this.lblHumedad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblHumedad.Location = new System.Drawing.Point(12, 55);
+            this.lblHumedad.Name = "lblHumedad";
+            this.lblHumedad.Size = new System.Drawing.Size(53, 13);
+            this.lblHumedad.TabIndex = 45;
+            this.lblHumedad.Text = "Humedad";
             // 
             // lblCiudad
             // 
             this.lblCiudad.AutoSize = true;
-            this.lblCiudad.Location = new System.Drawing.Point(61, 72);
+            this.lblCiudad.BackColor = System.Drawing.Color.Transparent;
+            this.lblCiudad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCiudad.Location = new System.Drawing.Point(12, 18);
             this.lblCiudad.Name = "lblCiudad";
             this.lblCiudad.Size = new System.Drawing.Size(43, 13);
-            this.lblCiudad.TabIndex = 18;
+            this.lblCiudad.TabIndex = 44;
             this.lblCiudad.Text = "Ciudad:";
-            // 
-            // txtCiudad
-            // 
-            this.txtCiudad.Location = new System.Drawing.Point(110, 65);
-            this.txtCiudad.Name = "txtCiudad";
-            this.txtCiudad.Size = new System.Drawing.Size(100, 20);
-            this.txtCiudad.TabIndex = 29;
-            // 
-            // btnObtener
-            // 
-            this.btnObtener.Location = new System.Drawing.Point(258, 65);
-            this.btnObtener.Name = "btnObtener";
-            this.btnObtener.Size = new System.Drawing.Size(75, 23);
-            this.btnObtener.TabIndex = 30;
-            this.btnObtener.Text = "Buscar";
-            this.btnObtener.UseVisualStyleBackColor = true;
-            this.btnObtener.Click += new System.EventHandler(this.btnObtener_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(448, 54);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(609, 392);
+            this.Controls.Add(this.lblDetalles);
+            this.Controls.Add(this.lblCondicion);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblTemperatura);
+            this.Controls.Add(this.lblTemp);
+            this.Controls.Add(this.LblTempMi);
+            this.Controls.Add(this.lblTemMa);
+            this.Controls.Add(this.lblTempMin);
+            this.Controls.Add(this.lblTempMax);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnObtener);
             this.Controls.Add(this.txtCiudad);
@@ -187,8 +369,8 @@ namespace TrabajoAPi
             this.Controls.Add(this.lblPresion);
             this.Controls.Add(this.lblAtardecer);
             this.Controls.Add(this.lblAmanecer);
-            this.Controls.Add(this.lblDetalles);
-            this.Controls.Add(this.lblCondicion);
+            this.Controls.Add(this.lblCountry);
+            this.Controls.Add(this.lblHumedad);
             this.Controls.Add(this.lblCiudad);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -200,6 +382,21 @@ namespace TrabajoAPi
 
         #endregion
 
+        private System.Windows.Forms.Label lblDetalles;
+        private System.Windows.Forms.Label lblCondicion;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTemperatura;
+        private System.Windows.Forms.Label lblTemp;
+        private System.Windows.Forms.Label LblTempMi;
+        private System.Windows.Forms.Label lblTemMa;
+        private System.Windows.Forms.Label lblTempMin;
+        private System.Windows.Forms.Label lblTempMax;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnObtener;
+        private System.Windows.Forms.TextBox txtCiudad;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -208,12 +405,9 @@ namespace TrabajoAPi
         private System.Windows.Forms.Label lblPresion;
         private System.Windows.Forms.Label lblAtardecer;
         private System.Windows.Forms.Label lblAmanecer;
-        private System.Windows.Forms.Label lblDetalles;
-        private System.Windows.Forms.Label lblCondicion;
+        private System.Windows.Forms.Label lblCountry;
+        private System.Windows.Forms.Label lblHumedad;
         private System.Windows.Forms.Label lblCiudad;
-        private System.Windows.Forms.TextBox txtCiudad;
-        private System.Windows.Forms.Button btnObtener;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

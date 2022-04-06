@@ -6,11 +6,11 @@ namespace Domain.Entities
 {
     public class Root
     {
-        public Coord coord { get; set; }
-        public List<Weather> weathers { get; set; }
+        public coord coord { get; set; }
+        public List<wheather> weather { get; set; }
 
-        public Main main { get; set; }
-        public Wind wind { get; set; }
-        public Sys sys { get; set; }
+        public main main { get; set; }
+        public wind wind { get; set; }
+        public sys sys { get; set; }
     }
 }

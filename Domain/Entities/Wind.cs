@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Domain.Entities
 {
-    public class Wind
+    public class wind
     {
         public double speed { get; set; }
     }

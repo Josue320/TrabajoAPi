@@ -24,27 +24,37 @@ namespace TrabajoAPi
             InitializeComponent();
         }
 
-        private void btnObtener_Click(object sender, EventArgs e)
+        
+
+        private void btnObtener_Click_1(object sender, EventArgs e)
         {
             try
             {
                 var infoClima = service.GetWeather(txtCiudad.Text);
 
                 //pictureBox1.ImageLocation = "https://openweathermap.org/img/w/" + infoClima.weather[0].icon + ".png";
-                //lblCondicion.Text = infoClima.weathers[0].main.ToString();
-                lblCondicion.Text = infoClima.weathers[0].main;
-                lblDetalles.Text = infoClima.weathers[0].description.ToString();
-                lblAtardecer.Text = service.convertToDateTime(infoClima.sys.sunset).ToString();
-                lblAmanecer.Text = service.convertToDateTime(infoClima.sys.sunrise).ToString();
-                lblVelocidadViento.Text = infoClima.wind.speed.ToString();
-                lblPresion.Text = infoClima.main.pressure.ToString();
-                pictureBox1.ImageLocation = service.GetImageLocation(infoClima.weathers[0]);
-            }
-            catch(Exception)
-            {
-                throw;
-            }
+                label4.Text = infoClima.weather[0].main.ToString();
+                lblCondicion.Text = infoClima.weather[0].main;
+                lblDetalles.Text = infoClima.weather[0].description.ToString();
+                label2.Text = infoClima.sys.country.ToString();
+                label3.Text = infoClima.main.humidity.ToString();
+                label9.Text = service.convertToDateTime(infoClima.sys.sunset).ToString();
+                label1.Text = service.convertToDateTime(infoClima.sys.sunrise).ToString();
+                label10.Text = infoClima.wind.speed.ToString();
+                label8.Text = infoClima.main.pressure.ToString();
+                lblTemMa.Text = infoClima.main.temp_max.ToString();
+                LblTempMi.Text = infoClima.main.temp_min.ToString();
+                lblTemperatura.Text = infoClima.main.temp.ToString();
+                label3.Text = infoClima.main.humidity.ToString();
 
+                pictureBox1.ImageLocation = service.GetImageLocation(infoClima.weather[0]);
+
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("No se encontro la ciudad");
+            }
+            txtCiudad.Text = null;
         }
     }
 }

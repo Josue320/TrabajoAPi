@@ -8,7 +8,7 @@ namespace AppCore.Iservices
    public interface IService
     {
         Root GetWeather(string ciudad);
-        string GetImageLocation(Weather w);
+        string GetImageLocation(wheather w);
 
         DateTime convertToDateTime(long milisegundos);
 

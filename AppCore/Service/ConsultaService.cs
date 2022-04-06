@@ -11,17 +11,18 @@ namespace AppCore.Service
     {
 
         private IConsulta service;
-
         public ConsultaService(IConsulta service)
         {
             this.service = service;
         }
         public DateTime convertToDateTime(long milisegundos)
         {
-            return service.convertToDateTime(milisegundos);
+
+                return service.convertToDateTime(milisegundos);
+            
         }
 
-        public string GetImageLocation(Weather w)
+        public string GetImageLocation(wheather w)
         {
             return service.GetImageLocation(w);
         }
@@ -30,5 +31,24 @@ namespace AppCore.Service
         {
             return service.GetWeather(ciudad);
         }
+
+        //public ConsultaService(IConsulta service)
+        //{
+        //    this.service = service;
+        //}
+        //public DateTime convertToDateTime(long milisegundos)
+        //{
+        //    return service.convertToDateTime(milisegundos);
+        //}
+
+        //public string GetImageLocation(wheather w)
+        //{
+        //    return service.GetImageLocation(w);
+        //}
+
+        //public Root GetWeather(string ciudad)
+        //{
+        //    return service.GetWeather(ciudad);
+        //}
     }
 }

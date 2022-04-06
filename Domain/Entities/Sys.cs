@@ -4,9 +4,10 @@ using System.Text;
 
 namespace Domain.Entities
 {
-    public class Sys
+    public class sys
     {
         public long sunrise { get; set; }
         public long sunset { get; set; }
+        public string country { get; set; }
     }
 }
